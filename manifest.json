@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Alura Auto-Flow",
+    "version": "1.0.0",
+    "description": "Automação de atividades na Alura.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://cursos.alura.com.br/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Alura Auto-Flow"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://cursos.alura.com.br/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
